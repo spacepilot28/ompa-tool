@@ -51,7 +51,7 @@ export function WizardFooterNav({
       <button
         type="button"
         onClick={handleNext}
-        disabled={!canGoNext && currentStep.id !== "business_context"}
+        disabled={!canGoNext}
         className="ml-auto rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500 disabled:opacity-50"
       >
         {currentStep.id === "summary" ? "Fertig" : "Weiter"}
