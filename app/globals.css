@@ -1,0 +1,188 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* --------------------------------------------------------
+   ZWEIMETER.CONSULTING BRANDING
+   -------------------------------------------------------- */
+
+
+html, body {
+  font-family: 'Tinos', serif;
+  background-color: #0b0f11; /* dunkles, neutrales Schwarz/Blau */
+  color: #f7f7f7;
+}
+
+/* Brand Colors */
+:root {
+  --zweimeter-orange: #fbb03b;
+  --zweimeter-orange-light: #fdd28a;
+  --zweimeter-blue: #012a51;
+  --zweimeter-blue-light: #0b3e72;
+  --zweimeter-grey-light: #c9d5d9;
+  --zweimeter-offwhite: #f7fff7;
+}
+
+/* Inputs */
+input[type="range"] {
+  accent-color: var(--zweimeter-orange);
+}
+
+/* Slider Thumb Design */
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--zweimeter-orange);
+  border: 2px solid var(--zweimeter-blue);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+/* Slider Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    var(--zweimeter-blue),
+    var(--zweimeter-orange)
+  );
+}
+
+/* Button Styling */
+.btn-primary {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: var(--zweimeter-orange);
+  color: #000;
+  font-size: 18px;
+  font-weight: 600
+}
+
+/* -----------------------------------------
+   OMPA Wizard Typografie (Zweimeter.consulting)
+   ----------------------------------------- */
+
+.ompa-wizard {
+  font-size: 18px; /* Basis im Wizard */
+}
+
+/* Hauptüberschriften (Intro + Blocktitel) */
+.ompa-wizard h1 {
+  font-size: 1.75rem; /* ca. 28px */
+}
+
+/* Unterüberschriften / wichtige Texte */
+.ompa-wizard h2 {
+  font-size: 1.5rem; /* ca. 24px */
+}
+
+/* Fragetext */
+.ompa-wizard .ompa-question-text {
+  font-size: 1.125rem; /* ca. 18px */
+}
+
+/* Metainfo (Prioritäten / Hinweise) */
+.ompa-wizard .ompa-meta-text {
+  font-size: 0.95rem; /* ca. 15px */
+}
+
+/* Skalenwerte + Bedeutungen */
+.ompa-wizard .ompa-scale-text {
+  font-size: 0.88rem; /* ca. 14px */
+}
+/* OMPA Wizard Typografie-Anpassungen */
+
+.ompa-block-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.ompa-question-text {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.ompa-scale-number {
+  font-size: 1rem;
+}
+/* --------------------------------------------------
+ * OMPA 2.0 – Print / PDF Optimierung (A1.7)
+ * -------------------------------------------------- */
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important; /* slate-900 */
+  }
+
+  /* Unsere Report-Hülle auf /ompa-report */
+  .ompa-report-shell {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Große Abschnitte nicht mitten auf der Seite umbrechen */
+  .ompa-section-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Erzwingt einen Seitenumbruch vor einem Abschnitt */
+  .ompa-page-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+}
+@media print {
+  /* Sorgt dafür, dass dunkler Hintergrund + Farben im PDF wirklich erhalten bleiben */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+.ompa-pdf {
+  /* Auf A4-Breite zentrieren */
+  max-width: 210mm;
+  margin: 0 auto;
+
+  /* Innenabstand im PDF-Modus */
+  padding: 12mm 14mm;
+}
+
+@media print {
+  .ompa-pdf {
+    /* Für den eigentlichen PDF-Render wichtig */
+    padding: 12mm 14mm;
+  }
+}
+@media print {
+  .ompa-page-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .ompa-avoid-break-inside {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

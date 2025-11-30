@@ -1,0 +1,2665 @@
+[
+  {
+    "id": "Q001",
+    "number": 1,
+    "code": "1",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Wir haben eine klare Vision/Ausrichtung",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q002",
+    "number": 2,
+    "code": "2",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Allen Mitarbeitern ist die Vision bekannt",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q003",
+    "number": 3,
+    "code": "3",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Unsere Vision/Ausrichtung berücksichtigt zukünftige  Veränderungen von Märkten |Kunden | Digitalisierung",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q004",
+    "number": 4,
+    "code": "4",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Wir haben eine klares Online-Marketing-Measurement-Modell",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q005",
+    "number": 5,
+    "code": "5",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Unser Produktportfolio ist auch für die Zukunft bestens aufgestellt",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q006",
+    "number": 6,
+    "code": "6",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Wir kennen unsere USP (Unique Selling Proposition) bzw.  unsere Wettbewerbsvorteile",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q007",
+    "number": 7,
+    "code": "7",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Wir haben Entwicklungen und Innovationen in unserem Markt im Blick",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q008",
+    "number": 8,
+    "code": "8",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Wir kennen unsere Stärken und Schwächen sowie Chancen und Risiken",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q009",
+    "number": 9,
+    "code": "9",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Es gibt eine klare Zielgruppenanalyse",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q010",
+    "number": 10,
+    "code": "10",
+    "blockId": "B1",
+    "blockTitle": "Ausrichtung & Online-Marketingstrategie",
+    "dimension": "strategie",
+    "text": "Wir haben eine auf Buyer Persona/Kundensegmente ausgerichtete  Online-Strategie",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "customer_segments"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q011",
+    "number": 11,
+    "code": "11",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Wir haben eine dokumentierte Content-Strategie.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q012",
+    "number": 12,
+    "code": "12",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Unsere Inhalte sind klar auf definierte Themencluster ausgerichtet.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q013",
+    "number": 13,
+    "code": "13",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Wir produzieren regelmäßig Content für unsere Zielgruppen (Blog, Video, Podcast etc.).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q014",
+    "number": 14,
+    "code": "14",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Wir erstellen Inhalte für alle Phasen der Customer Journey.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q015",
+    "number": 15,
+    "code": "15",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Unsere Inhalte generieren organisch neue Besucher und Leads.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q016",
+    "number": 16,
+    "code": "16",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Wir nutzen Content zur Positionierung als Experte (z. B. Whitepaper, Cases, Studien).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q017",
+    "number": 17,
+    "code": "17",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Unsere Inhalte werden aktiv über Newsletter und Social Media distribuiert.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q018",
+    "number": 18,
+    "code": "18",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Wir messen die Performance unserer Inhalte (Aufrufe, Engagement, Leads).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q019",
+    "number": 19,
+    "code": "19",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Wir aktualisieren und recyceln bestehende Inhalte regelmäßig.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q020",
+    "number": 20,
+    "code": "20",
+    "blockId": "B2",
+    "blockTitle": "Content & Inbound-Marketing",
+    "dimension": "content",
+    "text": "Unser Content ist klar auf unsere USP und Positionierung abgestimmt.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "value_proposition",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q021",
+    "number": 21,
+    "code": "21",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Das Potenzial unserer bestehenden Kunden wird optimal ausgeschöpft",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q022",
+    "number": 22,
+    "code": "22",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Wir haben eine hohe Kundenbindung",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q023",
+    "number": 23,
+    "code": "23",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Wir haben für strategisch wichtige Kunden Kundenentwicklungspläne",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q024",
+    "number": 24,
+    "code": "24",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Unsere Kunden nutzen mehrere unserer Produkte/Dienstleistungen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q025",
+    "number": 25,
+    "code": "25",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Es ist schwierig/aufwändig/kostenintensiv für unsere Kunden,  uns als Lieferanten/ Dienstleister auszutauschen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q026",
+    "number": 26,
+    "code": "26",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Das Marktpotenzial der Zielmärkte der möglichen Kunden wird  optimal ausgeschöpft",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q027",
+    "number": 27,
+    "code": "27",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Wir haben eine gute räumliche Abdeckung im Zielmarkt",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q028",
+    "number": 28,
+    "code": "28",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Wir kennen den Engpass / die Probleme unserer Kunden heute  und in der Zukunft",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q029",
+    "number": 29,
+    "code": "29",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Wir wachsen in unseren Kernmärkten (relativ im Vergleich  zur Marktentwicklung insgesamt)",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q030",
+    "number": 30,
+    "code": "30",
+    "blockId": "B3",
+    "blockTitle": "Kundenpotenzial & Marktausschöpfung",
+    "dimension": "kundenpotenzial",
+    "text": "Unser Bekanntheitsgrad bei unseren Zielkundenmärkten ist:",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_segments",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q031",
+    "number": 31,
+    "code": "31",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Leadgenerierung Anzahl",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q032",
+    "number": 32,
+    "code": "32",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Leadgenerierung Qualität",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q033",
+    "number": 33,
+    "code": "33",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Messeauftritte",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q034",
+    "number": 34,
+    "code": "34",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Vertriebsaktionen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q035",
+    "number": 35,
+    "code": "35",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Prospektmaterial",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q036",
+    "number": 36,
+    "code": "36",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Webseite",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q037",
+    "number": 37,
+    "code": "37",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Suchmaschinenoptimierung",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q038",
+    "number": 38,
+    "code": "38",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Automatisierter Leadgenerierungsprozess",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q039",
+    "number": 39,
+    "code": "39",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Ausgearbeiteter Marketing-/Kampagenplan",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q040",
+    "number": 40,
+    "code": "40",
+    "blockId": "B4",
+    "blockTitle": "Marketing-Kanäle & Präsenz",
+    "dimension": "marketing_kanaele",
+    "text": "Berücksichtigung moderner Medien (Social Media, etc.)",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q041",
+    "number": 41,
+    "code": "41",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Anfragen von Kunden/Neukunden",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q042",
+    "number": 42,
+    "code": "42",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Kaltakquisition durch Verkäufer",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q043",
+    "number": 43,
+    "code": "43",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Terminierte Außendienstbesuche",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q044",
+    "number": 44,
+    "code": "44",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Call-Mail-Call-Aktionen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q045",
+    "number": 45,
+    "code": "45",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Empfehlungen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q046",
+    "number": 46,
+    "code": "46",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Callcenter legt Termine",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q047",
+    "number": 47,
+    "code": "47",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Telefonakquisition durch Verkäufer",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q048",
+    "number": 48,
+    "code": "48",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Mailingaktionen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q049",
+    "number": 49,
+    "code": "49",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Angebote gezielt nachfassen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q050",
+    "number": 50,
+    "code": "50",
+    "blockId": "B7",
+    "blockTitle": "Akquisitionswege & Neukundengewinnung",
+    "dimension": "akquisewege",
+    "text": "Auf Messen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "channels",
+      "customer_relationships"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q051",
+    "number": 51,
+    "code": "51",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Wir nutzen E-Mail-Marketing aktiv für die Kommunikation mit Interessenten und Kunden.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q052",
+    "number": 52,
+    "code": "52",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Unsere E-Mail-Verteiler sind nach Zielgruppen und Interessen segmentiert.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q053",
+    "number": 53,
+    "code": "53",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Wir haben automatisierte E-Mail-Sequenzen (z. B. Onboarding oder Nurturing-Strecken).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q054",
+    "number": 54,
+    "code": "54",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Unsere E-Mail-Kampagnen sind auf klare Ziele ausgerichtet (z. B. Terminbuchung, Download, Kauf).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q055",
+    "number": 55,
+    "code": "55",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Wir messen Öffnungsraten, Klickraten und Conversions unserer E-Mail-Kampagnen.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q056",
+    "number": 56,
+    "code": "56",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Wir nutzen Lead-Magnete (z. B. Downloads, Webinare) zum Aufbau unserer E-Mail-Listen.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q057",
+    "number": 57,
+    "code": "57",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Wir setzen Trigger-basierte Kommunikation ein (z. B. nach Downloads, Klicks oder Inaktivität).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q058",
+    "number": 58,
+    "code": "58",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Opt-in-Prozesse und Datenschutz (DSGVO) sind rechtssicher umgesetzt.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q059",
+    "number": 59,
+    "code": "59",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Unser E-Mail-Marketing ist mit CRM- oder Vertriebssystemen verknüpft.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q060",
+    "number": 60,
+    "code": "60",
+    "blockId": "B5",
+    "blockTitle": "E-Mail-Marketing & Automation",
+    "dimension": "email_automation",
+    "text": "Wir testen und optimieren Inhalte, Betreffzeilen und Versandzeitpunkte unserer E-Mails regelmäßig.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "channels"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q061",
+    "number": 61,
+    "code": "61",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Unsere wichtigsten Online-Marketing-Kanäle sind technisch sauber messbar eingerichtet.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q062",
+    "number": 62,
+    "code": "62",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Wir haben klar definierte Online-Conversions (z. B. Leads, Terminbuchungen, Käufe).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q063",
+    "number": 63,
+    "code": "63",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Wir nutzen Dashboards oder Reports für unsere wichtigsten Marketing-Kennzahlen.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q064",
+    "number": 64,
+    "code": "64",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Marketing- und Vertriebskennzahlen werden regelmäßig im Team besprochen.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q065",
+    "number": 65,
+    "code": "65",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Wir kennen unsere wichtigsten Kennzahlen wie Cost-per-Lead, Customer Acquisition Cost und ROI.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q066",
+    "number": 66,
+    "code": "66",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Unser CRM ist mit Website, Formularen und Kampagnen verknüpft.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q067",
+    "number": 67,
+    "code": "67",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Wir haben definierte Marketing- und Vertriebs-Funnel (vom Erstkontakt bis zum Abschluss).",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q068",
+    "number": 68,
+    "code": "68",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Wir wissen, an welchen Stellen im Funnel die meisten Interessenten verloren gehen.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q069",
+    "number": 69,
+    "code": "69",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Wir nutzen A/B-Tests oder Experimente zur Optimierung unserer Online-Marketing-Maßnahmen.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q070",
+    "number": 70,
+    "code": "70",
+    "blockId": "B6",
+    "blockTitle": "Analytics, Tracking & Funnel",
+    "dimension": "analytics_funnel",
+    "text": "Unsere Marketing- und Vertriebs-Tools (z. B. CRM, Newsletter, Ads, Analytics) sind sinnvoll integriert.",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q071",
+    "number": 71,
+    "code": "71",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Zwichenmenschliche Beziehungen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q072",
+    "number": 72,
+    "code": "72",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Beim Interessenten Interesse wecken",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q073",
+    "number": 73,
+    "code": "73",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Sichere Bedarfsanalysen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q074",
+    "number": 74,
+    "code": "74",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Kaufwunsch emotional wecken",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q075",
+    "number": 75,
+    "code": "75",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Überzeugende Produktpräsentationen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q076",
+    "number": 76,
+    "code": "76",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Sichere Einwandbehandlungen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q077",
+    "number": 77,
+    "code": "77",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Beweis und Begründung im Verkauf",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q078",
+    "number": 78,
+    "code": "78",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "„Zu teuer“ – wie wird reagiert?",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q079",
+    "number": 79,
+    "code": "79",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Begeisterung übertragen können",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q080",
+    "number": 80,
+    "code": "80",
+    "blockId": "B8",
+    "blockTitle": "Verkaufskompetenzen",
+    "dimension": "verkaufskompetenzen",
+    "text": "Sicher abschließen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "customer_relationships",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q081",
+    "number": 81,
+    "code": "81",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Kreative Ideen umsetzen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q082",
+    "number": 82,
+    "code": "82",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Eigenmotivation und Begeisterung",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q083",
+    "number": 83,
+    "code": "83",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Interessenten zu Käufern machen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q084",
+    "number": 84,
+    "code": "84",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Ziele setzen und erreichen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q085",
+    "number": 85,
+    "code": "85",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Empfehlungsgeschäft nutzen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q086",
+    "number": 86,
+    "code": "86",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Kundenorientiert handeln",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q087",
+    "number": 87,
+    "code": "87",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Umgang mit Reklamationen/Beschwerden",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q088",
+    "number": 88,
+    "code": "88",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Jahres-Konditionsgespräche führen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q089",
+    "number": 89,
+    "code": "89",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Strukturiert Verkaufen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q090",
+    "number": 90,
+    "code": "90",
+    "blockId": "B9",
+    "blockTitle": "Ergänzende Vertriebskompetenzen",
+    "dimension": "vertriebs_skills",
+    "text": "Identifikation mit der Rolle Verkäufer",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "key_activities",
+      "key_resources"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q091",
+    "number": 91,
+    "code": "91",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Ausreichend Kundentermine",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q092",
+    "number": 92,
+    "code": "92",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Ausreichend Neukunden",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q093",
+    "number": 93,
+    "code": "93",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Sehr gute Margen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q094",
+    "number": 94,
+    "code": "94",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Keine Preisnachlässe",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q095",
+    "number": 95,
+    "code": "95",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Optimale Abschlussquote aus Verkaufsgesprächen",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q096",
+    "number": 96,
+    "code": "96",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Umsatzpotenzial bei bestehenden Kunden  wird optimal ausgeschöpft",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q097",
+    "number": 97,
+    "code": "97",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Wir wissen anhand von Rückmeldungen unserer Kunden exakt die aktuellen  Erwartungen an unsere Produkte",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q098",
+    "number": 98,
+    "code": "98",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Optimale Nutzung der zeitlichen Ressourcen der Vertriebsmitarbeiter",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  },
+  {
+    "id": "Q099",
+    "number": 99,
+    "code": "99",
+    "blockId": "B10",
+    "blockTitle": "Vertriebsengpässe",
+    "dimension": "vertriebsengpass",
+    "text": "Optimale Nutzung technischer Ressourcen (Vertrieb 4.0 | Digitalisierung | CRM )",
+    "helpText": null,
+    "scaleMin": 0,
+    "scaleMax": 4,
+    "scaleLabels": {
+      "0": "trifft überhaupt nicht zu",
+      "1": "trifft eher nicht zu",
+      "2": "teils/teils",
+      "3": "trifft eher zu",
+      "4": "trifft voll zu"
+    },
+    "weight": 1.0,
+    "priority": 1,
+    "allowComment": true,
+    "bmcMapping": [
+      "cost_structure",
+      "revenue_streams"
+    ],
+    "bmcTemplates": {}
+  }
+]
