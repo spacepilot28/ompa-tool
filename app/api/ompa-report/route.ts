@@ -56,10 +56,7 @@ export async function POST(req: NextRequest) {
 
     await browser.close();
 
-    // Debug-Ausgabe
-    const header = new TextDecoder("utf-8").decode(pdfBuffer.subarray(0, 4));
-    console.log("[OMPA-PDF] PDF fertig, Bytes:", pdfBuffer.length, "Header:", header);
-
+    console.log("[OMPA-PDF] PDF fertig, Bytes:", pdfBuffer.length);
 
     // 6. Buffer -> ArrayBuffer, damit der BodyInit-Typ passt
     const pdfArrayBuffer = pdfBuffer.buffer.slice(

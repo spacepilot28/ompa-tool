@@ -25,6 +25,11 @@ export interface WizardStepConfig {
 
   // Referenz auf den passenden Fragenblock (ID aus OMPA_BLOCKS)
   blockId?: string;
+  // Optionaler Validierungs-Hook für diesen Schritt
+  validate?: (state: WizardState) => {
+    isValid: boolean;
+    errors?: Record<string, string>;
+  };
 }
 
 // Zentraler Zustand des Wizards
