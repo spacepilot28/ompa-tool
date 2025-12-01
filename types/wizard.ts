@@ -15,6 +15,10 @@ export type WizardStepId =
   | "block_10"
   | "summary";
 
+// Grobe Struktur für den Business-Context-Step
+// (bei Bedarf später enger typisieren)
+export type BusinessContextData = Record<string, any>;
+
 // Konfiguration eines Wizard-Schritts
 export interface WizardStepConfig {
   id: WizardStepId;
