@@ -1,4 +1,10 @@
 // app/api/ompa-report/route.ts
+
+// Erzwingt Node.js-Runtime auf Vercel (für Puppeteer)
+export const runtime = "nodejs";
+// Verhindert jegliches Prerendering/Caching dieser Route
+export const dynamic = "force-dynamic";
+
 import type { NextRequest } from "next/server";
 import puppeteer from "puppeteer";
 
