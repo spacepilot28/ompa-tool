@@ -1,95 +1,72 @@
-// app/api/ompa-report/route.ts
 
-// Erzwingt Node.js-Runtime auf Vercel (für Puppeteer)
+// app/api/ompa-report/route.ts
+import type { NextRequest } from "next/server";
+import chromium from "@sparticuz/chromium-min";
+import puppeteer from "puppeteer-core";
+import type { WizardState } from "@/types/wizard";
+
 export const runtime = "nodejs";
-// Verhindert jegliches Prerendering/Caching dieser Route
 export const dynamic = "force-dynamic";
 
-import type { NextRequest } from "next/server";
-import puppeteer from "puppeteer";
-
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
-    // 1. URL aus dem Request-Body holen
-    const body = await req.json();
-    const url = body?.url as string | undefined;
+    // 1. State aus dem Request holen
+    const body = (await request.json()) as { state?: WizardState };
+    const state = body.state;
 
-    if (!url) {
-      return new Response(
-        JSON.stringify({ error: "Missing or invalid 'url' in body" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+    if (!state) {
+      console.error("[OMPA-REPORT] Missing state in request body");
+      return new Response("Missing state", { status: 400 });
     }
 
-    console.log("[OMPA-PDF] Starte PDF-Generation für URL:", url);
+    // 2. Origin (Host) aus der Request-URL berechnen – funktioniert lokal & auf Vercel
+    const url = new URL(request.url);
+    const origin = `${url.protocol}//${url.host}`;
 
-    // 2. Puppeteer-Browser starten
+    // 3. State für die Report-Seite kodieren
+    const encoded = encodeURIComponent(JSON.stringify(state));
+    const reportUrl = `${origin}/ompa-report?data=${encoded}`;
+
+    console.log("[OMPA-REPORT] Using report URL:", reportUrl);
+
+    // 4. Headless-Chrome (Puppeteer) mit dem Sparticuz-Chromium starten
     const browser = await puppeteer.launch({
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
     });
 
     const page = await browser.newPage();
+    await page.goto(reportUrl, { waitUntil: "networkidle0" });
 
-    // 3. Report-Seite laden
-    await page.goto(url, {
-      waitUntil: "networkidle0",
-    });
+    // 4. PDF erstellen
+const pdfBuffer = await page.pdf({
+  format: "A4",
+  printBackground: true,
+});
 
-    // 4. Einmal nach unten scrollen, damit alles gerendert ist
-    await page.evaluate(async () => {
-      await new Promise<void>((resolve) => {
-        const totalHeight = document.body.scrollHeight;
-        window.scrollTo(0, totalHeight);
-        setTimeout(resolve, 300);
-      });
-    });
-
-    // 5. PDF erzeugen
-    const pdfBuffer = await page.pdf({
-      format: "A4",
-      printBackground: true,
-      margin: {
-        top: "12mm",
-        right: "12mm",
-        bottom: "16mm",
-        left: "12mm",
-      },
-    });
-
+    // 5. Browser schließen
     await browser.close();
 
-    console.log("[OMPA-PDF] PDF fertig, Bytes:", pdfBuffer.length);
+      // 6. Buffer -> ArrayBuffer (gültiger BodyInit-Typ für Response)
+  const pdfArrayBuffer = pdfBuffer.buffer.slice(
+    pdfBuffer.byteOffset,
+    pdfBuffer.byteOffset + pdfBuffer.byteLength
+  ) as ArrayBuffer;
 
-    // 6. Buffer -> ArrayBuffer, damit der BodyInit-Typ passt
-    const pdfArrayBuffer = pdfBuffer.buffer.slice(
-      pdfBuffer.byteOffset,
-      pdfBuffer.byteOffset + pdfBuffer.byteLength
-    );
-
-    // TypeScript ist beim BodyInit etwas pingelig → explizit casten
-    const responseBody = pdfArrayBuffer as unknown as BodyInit;
-
-    // 7. PDF an den Client zurückgeben
-    return new Response(responseBody, {
-      status: 200,
-      headers: {
-        "Content-Type": "application/pdf",
-        "Content-Disposition": 'attachment; filename="ompa-ergebnis.pdf"',
-      },
-    });
+  // 7. Response mit PDF
+  // Typ-Hack: TypeScript kennt hier nur ArrayBuffer | SharedArrayBuffer,
+  // Response erwartet BodyInit – zur Laufzeit ist das in Ordnung.
+  return new Response(pdfArrayBuffer as any, {
+    status: 200,
+    headers: {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": 'attachment; filename="ompa-report.pdf"',
+    },
+  });
   } catch (error) {
-    console.error("[OMPA-PDF] PDF generation error:", error);
-
-    return new Response(
-      JSON.stringify({ error: "PDF generation failed" }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    console.error("[OMPA-REPORT] Error while generating PDF:", error);
+    return new Response("Error generating PDF", { status: 500 });
   }
 }
