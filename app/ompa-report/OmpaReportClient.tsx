@@ -47,12 +47,10 @@ export default function OmpaReportClient() {
 
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
-
       const link = document.createElement("a");
       link.href = url;
       link.download = "OMPA-Ergebnis.pdf";
       link.click();
-
       URL.revokeObjectURL(url);
     } catch (err) {
       console.error("Fehler beim PDF-Download:", err);
