@@ -1,7 +1,7 @@
 
 // app/api/ompa-report/route.ts
 import type { NextRequest } from "next/server";
-import chromium from "@sparticuz/chromium-min";
+import chromium from "@sparticuz/chromium";
 import puppeteer from "puppeteer-core";
 import type { WizardState } from "@/types/wizard";
 
@@ -29,27 +29,33 @@ export async function POST(request: NextRequest) {
 
     console.log("[OMPA-REPORT] Using report URL:", reportUrl);
 
-    // 4. Headless-Chrome (Puppeteer) mit dem Sparticuz-Chromium starten
-    const browser = await puppeteer.launch({
-      args: chromium.args,
-      executablePath: await chromium.executablePath(),
-      headless: chromium.headless,
-    });
+    // 4. Headless-Chrome (Puppeteer) mit Sparticuz-Chromium starten
+      const executablePath = await chromium.executablePath();
 
+      if (!executablePath) {
+        console.error("[OMPA-PDF] No executablePath returned by @sparticuz/chromium");
+        return new Response("Chromium executable not found", { status: 500 });
+      }
+
+      const browser = await puppeteer.launch({
+        args: chromium.args,
+        executablePath,
+        headless: true,
+      });
     const page = await browser.newPage();
     await page.goto(reportUrl, { waitUntil: "networkidle0" });
 
     // 4. PDF erstellen
-const pdfBuffer = await page.pdf({
-  format: "A4",
-  printBackground: true,
-});
+      const pdfBuffer = await page.pdf({
+        format: "A4",
+        printBackground: true,
+      });
 
     // 5. Browser schließen
     await browser.close();
 
-      // 6. Buffer -> ArrayBuffer (gültiger BodyInit-Typ für Response)
-  const pdfArrayBuffer = pdfBuffer.buffer.slice(
+    // 6. Buffer -> ArrayBuffer (gültiger BodyInit-Typ für Response)
+    const pdfArrayBuffer = pdfBuffer.buffer.slice(
     pdfBuffer.byteOffset,
     pdfBuffer.byteOffset + pdfBuffer.byteLength
   ) as ArrayBuffer;
