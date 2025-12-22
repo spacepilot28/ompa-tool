@@ -3,75 +3,86 @@
 import type { NextRequest } from "next/server";
 import chromium from "@sparticuz/chromium";
 import puppeteer from "puppeteer-core";
+import type { Browser } from "puppeteer-core";
 import type { WizardState } from "@/types/wizard";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// Optional, aber sinnvoll (Vercel Function Timeout/Limit):
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
+  let browser: Browser | null = null;
+
   try {
-    // 1. State aus dem Request holen
+    // 1) State aus dem Request holen
     const body = (await request.json()) as { state?: WizardState };
     const state = body.state;
 
     if (!state) {
-      console.error("[OMPA-REPORT] Missing state in request body");
       return new Response("Missing state", { status: 400 });
     }
 
-    // 2. Origin (Host) aus der Request-URL berechnen – funktioniert lokal & auf Vercel
+    // 2) Origin aus Request-URL (lokal & Vercel korrekt)
     const url = new URL(request.url);
     const origin = `${url.protocol}//${url.host}`;
 
-    // 3. State für die Report-Seite kodieren
+    // 3) Report-URL bauen
     const encoded = encodeURIComponent(JSON.stringify(state));
     const reportUrl = `${origin}/ompa-report?data=${encoded}`;
 
-    console.log("[OMPA-REPORT] Using report URL:", reportUrl);
+    console.log("[OMPA-PDF] reportUrl:", reportUrl);
 
-    // 4. Headless-Chrome (Puppeteer) mit Sparticuz-Chromium starten
-      const executablePath = await chromium.executablePath();
+    // 4) Chromium Pfad holen (sparticuz)
+    const executablePath = await chromium.executablePath();
 
-      if (!executablePath) {
-        console.error("[OMPA-PDF] No executablePath returned by @sparticuz/chromium");
-        return new Response("Chromium executable not found", { status: 500 });
-      }
+    if (!executablePath) {
+      console.error("[OMPA-PDF] No executablePath from @sparticuz/chromium");
+      return new Response("Chromium executable not found", { status: 500 });
+    }
 
-      const browser = await puppeteer.launch({
-        args: chromium.args,
-        executablePath,
-        headless: true,
-      });
+    // 5) Puppeteer starten
+    browser = await puppeteer.launch({
+      args: chromium.args,
+      executablePath,
+      headless: true, // <- wichtig: TS ruhigstellen + stabil auf Vercel
+    });
+
     const page = await browser.newPage();
+
+    // Optional, hilft manchmal bei stabilen Layouts
+    await page.setViewport({ width: 1280, height: 720 });
+
+    // 6) Seite laden
     await page.goto(reportUrl, { waitUntil: "networkidle0" });
 
-    // 4. PDF erstellen
-      const pdfBuffer = await page.pdf({
-        format: "A4",
-        printBackground: true,
-      });
+    // 7) PDF generieren
+    const pdfBuffer = await page.pdf({
+      format: "A4",
+      printBackground: true,
+      preferCSSPageSize: true,
+    });
 
-    // 5. Browser schließen
-    await browser.close();
-
-    // 6. Buffer -> ArrayBuffer (gültiger BodyInit-Typ für Response)
-    const pdfArrayBuffer = pdfBuffer.buffer.slice(
-    pdfBuffer.byteOffset,
-    pdfBuffer.byteOffset + pdfBuffer.byteLength
-  ) as ArrayBuffer;
-
-  // 7. Response mit PDF
-  // Typ-Hack: TypeScript kennt hier nur ArrayBuffer | SharedArrayBuffer,
-  // Response erwartet BodyInit – zur Laufzeit ist das in Ordnung.
-  return new Response(pdfArrayBuffer as any, {
-    status: 200,
-    headers: {
-      "Content-Type": "application/pdf",
-      "Content-Disposition": 'attachment; filename="ompa-report.pdf"',
-    },
-  });
+    // 8) Response (Buffer direkt als Body)
+    return new Response(new Uint8Array(pdfBuffer), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/pdf",
+        "Content-Disposition": 'attachment; filename="ompa-report.pdf"',
+        "Cache-Control": "no-store",
+      },
+    });
   } catch (error) {
-    console.error("[OMPA-REPORT] Error while generating PDF:", error);
+    console.error("[OMPA-PDF] PDF generation error:", error);
     return new Response("Error generating PDF", { status: 500 });
+  } finally {
+    if (browser) {
+      try {
+        await browser.close();
+      } catch {
+        // ignore
+      }
+    }
   }
 }
