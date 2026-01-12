@@ -58,7 +58,7 @@ export function WizardStepRenderer({
 
   // Summary / Ergebnis-Schritt (Platzhalter)
     if (step.type === "summary") {
-    return <ResultSummary state={state} />;
+    return <ResultSummary wizardState={state} />;
   }
 
   // Fallback

@@ -16,11 +16,23 @@ export async function POST(request: NextRequest) {
   let browser: Browser | null = null;
 
   try {
-    // 1) State aus dem Request holen
-    const body = (await request.json()) as { state?: WizardState };
-    const state = body.state;
+   // 1) State aus dem Request holen
+    const body = (await request.json()) as any;
+    console.log("[OMPA-PDF] body raw:", body);
+
+
+    // akzeptiere mehrere mögliche Payload-Formen
+    const state =
+      body?.state ??
+      body?.wizardState ??
+      body?.data ??
+      (body?.currentStepId ? body : undefined);
 
     if (!state) {
+      console.error(
+        "[OMPA-PDF] Missing state in request body. Keys:",
+        Object.keys(body ?? {})
+      );
       return new Response("Missing state", { status: 400 });
     }
 
@@ -32,7 +44,7 @@ export async function POST(request: NextRequest) {
     const encoded = encodeURIComponent(JSON.stringify(state));
     const reportUrl = `${origin}/ompa-report?data=${encoded}`;
 
-    console.log("[OMPA-PDF] reportUrl:", reportUrl);
+      console.log("[OMPA-PDF] reportUrl:", reportUrl);
 
     // 4) Chromium Pfad holen (sparticuz)
     const executablePath = await chromium.executablePath();

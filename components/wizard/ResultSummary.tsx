@@ -26,10 +26,10 @@ function getBlockRecommendation(title: string, need: number): string {
   return `Aktuell kein Handlungsbedarf – „${title}“ kann als Stärke genutzt werden. Baue hier Referenzen, Best Practices und Storytelling für Marketing & Vertrieb auf.`;
 }
 
-interface ResultSummaryProps {
-  state: WizardState;
+type ResultSummaryProps = {
+  wizardState: WizardState;
   pdfMode?: boolean;
-}
+};
 
 // Verbales Label, Ton & Badge-Klasse für den Gesamt-Handlungsbedarf
 function getOverallLabel(need: number) {
@@ -69,12 +69,16 @@ function getNeedLevelClass(need: number) {
   return "bg-emerald-500";
 }
 
-export default function ResultSummary({ state, pdfMode = false }: ResultSummaryProps) {
+export default function ResultSummary({
+  wizardState,
+  pdfMode = false,
+}: ResultSummaryProps) {
+
 
   // Block-Ergebnisse berechnen
   const [isExportingPdf, setIsExportingPdf] = useState(false);
   const blockResults = OMPA_BLOCKS.map((block) => {
-    const res: any = calculateBlockScore(block, state);
+    const res: any = calculateBlockScore(block, wizardState);
     return {
       id: block.id,
       index: (block as any).index ?? 0,
@@ -181,7 +185,7 @@ const topStrengthBlocks = blocksByNeed
 // 9. Top 10 Empfehlungen je Frage
 const topRecommendations = getTopRecommendations(
   OMPA_BLOCKS as any,
-  state
+  wizardState
 );
   return (
     <div className="space-y-8">
@@ -215,7 +219,7 @@ const topRecommendations = getTopRecommendations(
       setIsExportingPdf(true);
 
       // 1. Wizard-Status serialisieren
-      const payload = JSON.stringify(state);
+      const payload = JSON.stringify(wizardState);
       const encoded = encodeURIComponent(btoa(payload));
 
       // 2. Report-URL bauen (unsere neue Seite!)
@@ -224,10 +228,8 @@ const topRecommendations = getTopRecommendations(
       // 3. API zum PDF-Rendern aufrufen
       const res = await fetch("/api/ompa-report", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url: reportUrl }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ state: wizardState }), // WICHTIG: key muss "state" heißen
       });
 
       if (!res.ok) {

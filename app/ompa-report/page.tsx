@@ -9,9 +9,7 @@ export default function OmpaReportPage() {
     <Suspense
       fallback={
         <main className="min-h-screen bg-slate-950 text-gray-100 flex items-center justify-center">
-          <p className="text-sm text-gray-400">
-            Report wird geladen…
-          </p>
+          <p className="text-sm text-gray-400">Report wird geladen…</p>
         </main>
       }
     >
@@ -19,3 +17,4 @@ export default function OmpaReportPage() {
     </Suspense>
   );
 }
+
