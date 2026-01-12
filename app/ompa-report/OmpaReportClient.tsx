@@ -45,7 +45,7 @@ export default function OmpaReportClient() {
   }
 
   return (
-    <div className="ompa-pdf px-8 py-12 bg-slate-950 text-gray-100">
+    <div id="ompa-report-root" className="ompa-pdf px-8 py-12 bg-slate-950 text-gray-100">
       <ResultSummary wizardState={wizardState} pdfMode />
     </div>
   );
