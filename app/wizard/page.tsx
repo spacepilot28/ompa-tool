@@ -1,10 +1,24 @@
-//* app/wizard/page.tsx *//
+// app/wizard/page.tsx
 
 "use client";
 
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { WizardShell } from "@/components/wizard/wizardShell";
+import { getVariantConfig } from "@/config/ompaVariants";
 
-export default function WizardPage() {
+/**
+ * Innere Komponente, die useSearchParams() verwenden darf.
+ * Wird in <Suspense> eingebettet, wie von Next.js 16 gefordert.
+ */
+function WizardPageInner() {
+  const searchParams = useSearchParams();
+  const variantParam = searchParams.get("variant");
+  const couponParam = searchParams.get("coupon");
+
+  // Variante aus URL auslesen (Fallback: light)
+  const variant = getVariantConfig(variantParam);
+
   return (
     <main className="min-h-screen bg-slate-950 text-gray-100">
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
@@ -14,20 +28,37 @@ export default function WizardPage() {
           </p>
 
           <h1 className="text-2xl font-bold">
-            OMPA 2.0 – Online-Marketing-Potentialanalyse
+            {variant.label} – Online-Marketing-Potenzialanalyse
           </h1>
 
           <p className="text-sm text-gray-400">
-            Beantworte die folgenden Fragen, um deinen aktuellen Online-Marketing-Status 
-            inklusive Handlungsbedarf und Reifegrad auszuwerten.
+            {variant.id === "light"
+              ? "Beantworte 20 Kernfragen und erhalte deinen kostenlosen Schnellcheck."
+              : "Beantworte die folgenden Fragen, um deinen aktuellen Online-Marketing-Status inklusive Handlungsbedarf und Reifegrad auszuwerten."}
           </p>
         </header>
 
         <section>
-          <WizardShell />
+          <WizardShell variant={variant} initialCouponCode={couponParam} />
         </section>
       </div>
     </main>
   );
 }
 
+/**
+ * Wizard-Seite mit Suspense-Boundary für useSearchParams().
+ */
+export default function WizardPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-slate-950 text-gray-100 flex items-center justify-center">
+          <p className="text-sm text-gray-400">Wizard wird geladen…</p>
+        </main>
+      }
+    >
+      <WizardPageInner />
+    </Suspense>
+  );
+}

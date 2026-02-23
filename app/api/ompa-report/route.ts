@@ -1,101 +1,95 @@
-
 // app/api/ompa-report/route.ts
 import type { NextRequest } from "next/server";
 import chromium from "@sparticuz/chromium";
-import puppeteer from "puppeteer-core";
-import type { Browser } from "puppeteer-core";
+import puppeteer, { type Browser } from "puppeteer-core";
 import type { WizardState } from "@/types/wizard";
-import fs from "node:fs";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-function pickLocalChrome(): string | null {
-  // Optional: eigener Pfad per .env.local
-  const envPath = process.env.PUPPETEER_EXECUTABLE_PATH;
-  const candidates = [
-    envPath,
-
-    // Windows (Chrome)
-    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-    "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-
-    // Windows (Edge)
-    "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
-    "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-
-    // macOS
-    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
-
-    // Linux
-    "/usr/bin/google-chrome",
-    "/usr/bin/google-chrome-stable",
-    "/usr/bin/chromium",
-    "/usr/bin/chromium-browser",
-  ];
-
-  for (const p of candidates) {
-    if (p && fs.existsSync(p)) return p;
-  }
-  return null;
-}
-
-function getOrigin(req: NextRequest): string {
-  const u = new URL(req.url);
-  const proto =
-    req.headers.get("x-forwarded-proto") ?? u.protocol.replace(":", "");
-  const host =
-    req.headers.get("x-forwarded-host") ??
-    req.headers.get("host") ??
-    u.host;
-
-  return `${proto}://${host}`;
+function sleep(ms: number) {
+  return new Promise((r) => setTimeout(r, ms));
 }
 
 export async function POST(request: NextRequest) {
   let browser: Browser | null = null;
 
   try {
-    // 1) State aus dem Request holen (nur "state" ist offiziell)
-    const body = (await request.json()) as { state?: WizardState } | null;
-    const state = body?.state;
+    // 1) Body lesen
+    const body = (await request.json()) as any;
+
+    // akzeptiere mehrere Payload-Formen
+    const state: WizardState | undefined =
+      body?.state ??
+      body?.wizardState ??
+      body?.data ??
+      (body?.currentStepId ? body : undefined);
 
     if (!state) {
-      console.error(
-        "[OMPA-PDF] Missing state in request body. Keys:",
-        Object.keys(body ?? {})
-      );
+      console.error("[OMPA-PDF] Missing state in request body. Keys:", Object.keys(body ?? {}));
       return new Response("Missing state", { status: 400 });
     }
 
-    // 2) Report-URL bauen
-    const origin = getOrigin(request);
+    // 2) Origin bestimmen
+    const url = new URL(request.url);
+    const origin = `${url.protocol}//${url.host}`;
+
+    // 3) Report-URL bauen
     const encoded = encodeURIComponent(JSON.stringify(state));
     const reportUrl = `${origin}/ompa-report?data=${encoded}`;
     console.log("[OMPA-PDF] reportUrl:", reportUrl);
 
-    // 3) Lokal vs. Vercel: unterschiedliche Chrome-Quelle
-    const isVercel =
-      !!process.env.VERCEL || !!process.env.AWS_LAMBDA_FUNCTION_VERSION;
+    // 4) ExecutablePath bestimmen
+    //
+    //    Aktuelle API von @sparticuz/chromium (v131+):
+    //    - chromium.executablePath() nimmt KEINE Parameter mehr
+    //    - Für Vercel/Lambda: Die Chromium-Binärdatei wird automatisch
+    //      aus dem mitgelieferten Paket entpackt
+    //    - Optional: CHROMIUM_REMOTE_EXEC_PATH als Umgebungsvariable
+    //      setzen, falls ein externer Chromium-Pack genutzt werden soll
+    //
+    const isVercel = !!process.env.VERCEL;
+    const localExec = process.env.CHROMIUM_LOCAL_EXEC_PATH;
 
-    const executablePath = isVercel
-      ? await chromium.executablePath()
-      : pickLocalChrome();
+    let executablePath: string;
 
-    if (!executablePath) {
-      console.error(
-        "[OMPA-PDF] No Chrome executable found. Set PUPPETEER_EXECUTABLE_PATH in .env.local (local dev)."
-      );
-      return new Response("Chrome executable not found", { status: 500 });
+    if (isVercel) {
+      // Auf Vercel: @sparticuz/chromium entpackt die Binärdatei automatisch
+      executablePath = await chromium.executablePath();
+    } else {
+      // Lokal: bevorzugt installierten Browser nutzen (Windows/Mac)
+      if (localExec) {
+        executablePath = localExec;
+      } else {
+        // Fallback: Versuch über @sparticuz/chromium (Linux/Mac)
+        // Auf Windows funktioniert das oft nicht – dann CHROMIUM_LOCAL_EXEC_PATH setzen
+        try {
+          executablePath = await chromium.executablePath();
+        } catch {
+          // Letzter Fallback: Chrome-Standardpfade je Betriebssystem
+          const platform = process.platform;
+          if (platform === "win32") {
+            executablePath =
+              "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+          } else if (platform === "darwin") {
+            executablePath =
+              "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+          } else {
+            executablePath = "/usr/bin/google-chrome-stable";
+          }
+          console.warn(
+            `[OMPA-PDF] @sparticuz/chromium konnte keinen Pfad ermitteln. Fallback: ${executablePath}`
+          );
+        }
+      }
     }
 
-    const launchArgs = isVercel ? chromium.args : [];
+    console.log("[OMPA-PDF] executablePath:", executablePath);
 
-    // 4) Puppeteer starten (headless MUSS boolean sein -> kein "new")
+    // 5) Puppeteer starten
     browser = await puppeteer.launch({
-      args: launchArgs,
+      args: chromium.args,
       executablePath,
       headless: true,
     });
@@ -103,19 +97,18 @@ export async function POST(request: NextRequest) {
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 720 });
 
-    // 5) Seite laden + warten bis Report wirklich da ist (verhindert Fallback-PDF)
+    // 6) Seite laden
     await page.goto(reportUrl, { waitUntil: "networkidle0", timeout: 60_000 });
+    await sleep(400); // kleiner Puffer für Fonts/Charts
 
-    // Wir warten auf ein Element, das NUR im finalen Report existiert:
-    await page.waitForSelector("#ompa-report-root", { timeout: 60_000 });
-
-    // 6) PDF rendern
+    // 7) PDF bauen
     const pdfBuffer = await page.pdf({
       format: "A4",
       printBackground: true,
       preferCSSPageSize: true,
     });
 
+    // 8) Response
     return new Response(new Uint8Array(pdfBuffer), {
       status: 200,
       headers: {

@@ -23,6 +23,26 @@ export function WizardFooterNav({
   onNext,
   onValidate,
 }: Props) {
+  // ── Sichtbarkeit und Zustand des Weiter-Buttons je nach Step-Typ ──
+
+  // E-Mail-Gate: Kein Weiter-Button, die Komponente handelt das selbst
+  // (nach erfolgreicher Eingabe wird gateCompleted=true und automatisch weitergeblättert)
+  const isGateStep =
+    currentStep.type === "email_gate" || currentStep.type === "payment_gate";
+
+  // Bei Gate-Steps: Weiter nur wenn Gate abgeschlossen
+  const isGateBlocking = isGateStep && !state.gateCompleted;
+
+  // Branchenauswahl: Weiter nur wenn Branche gewählt
+  const isBranchBlocking =
+    currentStep.type === "branch_select" && !state.selectedBranch;
+
+  // Weiter-Button deaktiviert?
+  const nextDisabled = !canGoNext || isGateBlocking || isBranchBlocking;
+
+  // Bei Gate-Steps den Button ausblenden (nicht nur deaktivieren)
+  const hideNextButton = isGateStep && !state.gateCompleted;
+
   const handleNext = () => {
     if (currentStep.validate) {
       const result = currentStep.validate(state);
@@ -33,6 +53,16 @@ export function WizardFooterNav({
     }
     onNext();
   };
+
+  // Button-Text je nach Step
+  let nextLabel = "Weiter";
+  if (currentStep.type === "summary") {
+    nextLabel = "Fertig";
+  } else if (currentStep.type === "email_gate" && state.gateCompleted) {
+    nextLabel = "Zum Report";
+  } else if (currentStep.type === "payment_gate" && state.gateCompleted) {
+    nextLabel = "Zum Report";
+  }
 
   return (
     <div className="flex items-center justify-between gap-4">
@@ -48,14 +78,16 @@ export function WizardFooterNav({
         )}
       </div>
 
-      <button
-        type="button"
-        onClick={handleNext}
-        disabled={!canGoNext}
-        className="ml-auto rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500 disabled:opacity-50"
-      >
-        {currentStep.id === "summary" ? "Fertig" : "Weiter"}
-      </button>
+      {!hideNextButton && (
+        <button
+          type="button"
+          onClick={handleNext}
+          disabled={nextDisabled}
+          className="ml-auto rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500 disabled:opacity-50"
+        >
+          {nextLabel}
+        </button>
+      )}
     </div>
   );
 }

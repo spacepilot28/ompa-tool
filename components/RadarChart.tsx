@@ -24,6 +24,8 @@ ChartJS.register(
 interface Props {
   labels: string[];
   values: number[]; // 0–100: Handlungsbedarf
+  benchmarkValues?: number[]; // 0–100: Branchendurchschnitt (optional)
+  benchmarkLabel?: string;    // z.B. "Branchendurchschnitt: Dienstleistung"
 }
 
 /**
@@ -113,23 +115,76 @@ const options: ChartOptions<"radar"> = {
   },
 };
 
-export default function RadarChart({ labels, values }: Props) {
+const COLOR_BENCHMARK = "rgba(99, 179, 237, 0.9)";    // blau für Branchendurchschnitt
+const COLOR_BENCHMARK_BG = "rgba(99, 179, 237, 0.10)";
+
+export default function RadarChart({ labels, values, benchmarkValues, benchmarkLabel }: Props) {
+  const hasBenchmark = benchmarkValues && benchmarkValues.length === values.length;
+
+  // Legend nur anzeigen, wenn Benchmark vorhanden
+  const optionsWithLegend: ChartOptions<"radar"> = {
+    ...options,
+    plugins: {
+      ...options.plugins,
+      legend: {
+        display: !!hasBenchmark,
+        position: "bottom" as const,
+        labels: {
+          color: LABEL_COLOR,
+          font: { size: 11 },
+          usePointStyle: true,
+          pointStyle: "circle",
+          padding: 16,
+        },
+      },
+      tooltip: {
+        enabled: true,
+        callbacks: {
+          label: (ctx) => {
+            const label = ctx.dataset.label || "";
+            const value =
+              typeof ctx.parsed === "number" ? ctx.parsed : ctx.parsed.r;
+            const valNumber = typeof value === "number" ? value : 0;
+            return `${label}: ${valNumber.toFixed(1)} %`;
+          },
+        },
+      },
+    },
+  };
+
+  const datasets = [
+    {
+      label: "Dein Handlungsbedarf",
+      data: values,
+      fill: true,
+      backgroundColor: COLOR_NEED_BG,
+      borderColor: COLOR_NEED,
+      pointBackgroundColor: COLOR_NEED,
+      pointBorderColor: "#020617",
+      pointHoverBackgroundColor: "#ffffff",
+      pointHoverBorderColor: COLOR_NEED,
+      pointHoverBorderWidth: 2,
+    },
+  ];
+
+  if (hasBenchmark) {
+    datasets.push({
+      label: benchmarkLabel ?? "Branchendurchschnitt",
+      data: benchmarkValues,
+      fill: true,
+      backgroundColor: COLOR_BENCHMARK_BG,
+      borderColor: COLOR_BENCHMARK,
+      pointBackgroundColor: COLOR_BENCHMARK,
+      pointBorderColor: "#020617",
+      pointHoverBackgroundColor: "#ffffff",
+      pointHoverBorderColor: COLOR_BENCHMARK,
+      pointHoverBorderWidth: 2,
+    });
+  }
+
   const data = {
     labels,
-    datasets: [
-      {
-        label: "Handlungsbedarf je Themenblock",
-        data: values,
-        fill: true,
-        backgroundColor: COLOR_NEED_BG,
-        borderColor: COLOR_NEED,
-        pointBackgroundColor: COLOR_NEED,
-        pointBorderColor: "#020617", // sehr dunkler Hintergrundton
-        pointHoverBackgroundColor: "#ffffff",
-        pointHoverBorderColor: COLOR_NEED,
-        pointHoverBorderWidth: 2,
-      },
-    ],
+    datasets,
   };
 
   return (
@@ -141,7 +196,7 @@ export default function RadarChart({ labels, values }: Props) {
         margin: "0 auto",
       }}
     >
-      <Radar data={data} options={options} />
+      <Radar data={data} options={optionsWithLegend} />
     </div>
   );
 }

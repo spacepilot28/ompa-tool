@@ -3,11 +3,14 @@
 "use client";
 
 import type { OmpaQuestion } from "../../config/ompaBlocks";
+import type { PriorityMode } from "../../types/variant";
+import { SIMPLE_PRIORITY_LABELS } from "../../types/variant";
 
 interface Props {
   question: OmpaQuestion;
   value?: number;                            // 0–100
   priority?: 1 | 2 | 3 | 4;                  // kundenspezifische Wichtigkeit
+  priorityMode?: PriorityMode;                // "simple" (Light) oder "full" (Medium/Heavy)
   onChange: (value: number) => void;
   onChangePriority: (value: 1 | 2 | 3 | 4) => void;
 }
@@ -16,6 +19,7 @@ export function OmpaSliderQuestion({
   question,
   value,
   priority,
+  priorityMode = "full",
   onChange,
   onChangePriority,
 }: Props) {
@@ -49,28 +53,24 @@ export function OmpaSliderQuestion({
           </div>
         </div>
 
-        {/* Skala mit 1.0rem Schriftgröße */}
+        {/* Skala-Beschriftung */}
         <div className="mt-3 grid grid-cols-5 text-gray-400 gap-3 text-[1rem] leading-tight">
           <div>
             <div className="ompa-scale-number font-bold text-gray-200">0</div>
             <div>trifft gar nicht zu</div>
           </div>
-
           <div>
             <div className="ompa-scale-number font-bold text-gray-200">25</div>
             <div>trifft eher nicht zu</div>
           </div>
-
           <div className="text-center">
             <div className="ompa-scale-number font-bold text-gray-200">50</div>
             <div>teils / teils</div>
           </div>
-
           <div className="text-right">
             <div className="ompa-scale-number font-bold text-gray-200">75</div>
             <div>trifft überwiegend zu</div>
           </div>
-
           <div className="text-right">
             <div className="ompa-scale-number font-bold text-gray-200">100</div>
             <div>trifft voll zu</div>
@@ -78,39 +78,68 @@ export function OmpaSliderQuestion({
         </div>
       </div>
 
-      {/* Wichtigkeitsfrage + Buttons */}
+      {/* ── Prioritäts-Eingabe ── */}
       <div>
         <div className="text-gray-300 text-base mb-2">
           Wie wichtig bzw. relevant ist dieses Thema für dich zur Zeit?
         </div>
 
-        <div className="flex gap-2 mb-2">
-          {[1, 2, 3, 4].map((p) => {
-            const selected = p === effectivePriority;
-            return (
-              <button
-                key={p}
-                type="button"
-                onClick={() => onChangePriority(p as 1 | 2 | 3 | 4)}
-                className={[
-                  "px-4 py-1 rounded-full text-sm font-semibold border transition-all",
-                  selected
-                    ? "bg-[#fbb03b] text-black border-[#fbb03b]"
-                    : "bg-transparent text-gray-200 border-gray-600 hover:border-[#fbb03b]",
-                ].join(" ")}
-              >
-                {p}
-              </button>
-            );
-          })}
-        </div>
+        {/* === Modus: Vereinfacht (Light) === */}
+        {priorityMode === "simple" && (
+          <div className="flex gap-2 mb-2">
+            {SIMPLE_PRIORITY_LABELS.map((item) => {
+              const selected = item.numericValue === effectivePriority;
+              return (
+                <button
+                  key={item.value}
+                  type="button"
+                  onClick={() => onChangePriority(item.numericValue)}
+                  className={[
+                    "px-5 py-2 rounded-full text-sm font-semibold border transition-all",
+                    selected
+                      ? "bg-[#fbb03b] text-black border-[#fbb03b]"
+                      : "bg-transparent text-gray-200 border-gray-600 hover:border-[#fbb03b]",
+                  ].join(" ")}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
+        )}
 
-        {/* Standard-Priorität JETZT unter der Wichtigkeitsfrage */}
-        <div className="text-gray-400 text-sm">
-          Standard-Priorität laut OMPA:{" "}
-          <span className="font-semibold">{question.defaultPriority}</span>{" "}
-          (1 = unwichtig / unrelevant, 4 = sehr wichtig / hohe Relevanz)
-        </div>
+        {/* === Modus: Vollständig (Medium / Heavy) === */}
+        {priorityMode === "full" && (
+          <>
+            <div className="flex gap-2 mb-2">
+              {([1, 2, 3, 4] as const).map((p) => {
+                const selected = p === effectivePriority;
+                return (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => onChangePriority(p)}
+                    className={[
+                      "px-4 py-1 rounded-full text-sm font-semibold border transition-all",
+                      selected
+                        ? "bg-[#fbb03b] text-black border-[#fbb03b]"
+                        : "bg-transparent text-gray-200 border-gray-600 hover:border-[#fbb03b]",
+                    ].join(" ")}
+                  >
+                    {p}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Standard-Priorität Hinweis */}
+            <div className="text-gray-400 text-sm">
+              Standard-Priorität laut OMPA:{" "}
+              <span className="font-semibold">{question.defaultPriority}</span>{" "}
+              (1 = unwichtig / unrelevant, 4 = sehr wichtig / hohe Relevanz)
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
